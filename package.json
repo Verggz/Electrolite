@@ -13,12 +13,17 @@
   "author": "PenguinDetox",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "express": "^4.17.2",
-    "fs-extra": "^10.0.0"
+    "fs-extra": "^10.0.0",
+    "hypixel-api-reborn": "^9.0.3",
+    "prismarine-nbt": "^2.0.0",
+    "set-interval-async": "^2.0.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/fs-extra": "^9.0.13",
-    "@types/node": "^17.0.4"
+    "@types/node": "^17.0.4",
+    "@types/set-interval-async": "^1.0.0"
   }
 }
