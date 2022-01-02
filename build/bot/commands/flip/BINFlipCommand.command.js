@@ -39,9 +39,8 @@ class BINFlipCommand extends SlashCommand_model_1.SlashCommand {
             yield this.interaction.deferReply();
             var curtime = Date.now();
             var profit = this.interaction.options.getInteger("profit", true);
-            var res = yield this.http.post("https://electrolite.herokuapp.com/api/flipper/bin/flip", { "profit": profit });
-            console.log(res.data.random);
-            if (res.data.random) {
+            var res = yield this.http.post("https://electrolite.herokuapp.com/api/flipper/bin/flip", { "profit": profit }).catch(e => { return; });
+            if (res && res.data.random) {
                 var finalEmbed = this.CreateEmbed()
                     .setTitle("Found Profitable BIN Flip!")
                     .setColor("#29B0E2")
