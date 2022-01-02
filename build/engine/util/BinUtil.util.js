@@ -88,7 +88,7 @@ class BinUtil {
             var binauc = [];
             for (var i = 0; i < ah.length; i++) {
                 if (ah[i].bin != undefined) {
-                    binauc.push({ "item": ah[i].item, "item_bytes": ah[i].item_bytes, price: ah[i].price });
+                    binauc.push({ "item": ah[i].item, "item_bytes": ah[i].item_bytes, price: ah[i].price, "aucid": ah[i].aucid });
                 }
             }
             yield fs_extra_1.default.writeJSON(__dirname + "/../../../cache/bin.json", { "auctions": binauc });

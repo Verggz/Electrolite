@@ -5,7 +5,9 @@
   "main": "./build/main.js",
   "scripts": {
     "start": "node --max-old-space-size=512 ./build/main.js && export NODE_ENV=production",
-    "dev": "tsc && node ./build/main.js"
+    "dev": "tsc && node ./build/main.js",
+    "bot": "node ./build/bot/main.bot.js",
+    "botdev": "tsc && node ./build/bot/main.bot.js"
   },
   "keywords": [
     "minecraft"
@@ -13,7 +15,11 @@
   "author": "PenguinDetox",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/builders": "^0.11.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
     "axios": "^0.24.0",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.5.0",
     "express": "^4.17.2",
     "fs-extra": "^10.0.0",
     "hypixel-api-reborn": "^9.0.3",

@@ -21,11 +21,9 @@ class BINFlipEndpoint {
         return __awaiter(this, void 0, void 0, function* () {
             FlipperRouter_router_1.default.GetRouter().post('/bin/flip', function (req, res, next) {
                 return __awaiter(this, void 0, void 0, function* () {
-                    console.log(req.body);
                     if (BinUtil_util_1.BinUtil.sniped.timestamp <= 0) {
                         var file = yield fs_extra_1.default.readJSON(__dirname + "/../../../../cache/binflips.json");
                         var viable = [];
-                        console.log(file.auctions.length);
                         for (var i = 0; i < file.auctions.length; i++) {
                             if (file.auctions[i][0] < req.body.profit) {
                                 continue;

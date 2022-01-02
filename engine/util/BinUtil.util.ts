@@ -91,7 +91,7 @@ export class BinUtil{
             if(ah[i].bin != undefined){
                 
 
-                binauc.push({"item":ah[i].item,"item_bytes":ah[i].item_bytes,price:ah[i].price});
+                binauc.push({"item":ah[i].item,"item_bytes":ah[i].item_bytes,price:ah[i].price,"aucid":ah[i].aucid});
             }
         }
 
